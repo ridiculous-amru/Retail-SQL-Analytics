@@ -1,102 +1,107 @@
 📊 Retail Sales Analytics using PostgreSQL (Large Dataset)
-📌 Project Overview
 
-This project focuses on end-to-end analysis of a large-scale retail / e-commerce dataset using PostgreSQL.
-The goal is to simulate a real-world data analyst workflow, from database design to business-driven insights.
+📌 Project Overview :
 
-The project uses multiple relational tables and 10,000+ records to analyze sales performance, customer behavior, and product trends.
+~ This project focuses on end-to-end analysis of a large-scale retail / e-commerce dataset using PostgreSQL.
 
-🎯 Business Objectives
+~ The goal is to simulate a real-world data analyst workflow, from database design to business-driven insights.
 
-Analyze overall and monthly sales performance
+~ The project uses multiple relational tables and 10,000+ records to analyze sales performance, customer behavior, and product trends.
 
-Identify top customers and products
+🎯 Business Objectives :
 
-Understand category-wise revenue contribution
+~ Analyze overall and monthly sales performance
 
-Detect repeat customers
+~ Identify top customers and products
 
-Apply advanced SQL concepts for analytics
+~ Understand category-wise revenue contribution
 
-🛠 Tools & Technologies
+~ Detect repeat customers
 
-Database: PostgreSQL
+~ Apply advanced SQL concepts for analytics
 
-Language: SQL
 
-Concepts Used:
+🛠 Tools & Technologies :
 
-JOINS (INNER, LEFT)
+~ Database: PostgreSQL
 
-GROUP BY & HAVING
+~ Language: SQL
 
-Subqueries
+Concepts Used :
 
-CASE WHEN
+~ JOINS (INNER, LEFT)
 
-Window Functions (RANK, PARTITION BY)
+~ GROUP BY & HAVING
 
-CTEs (WITH clause)
+~ Subqueries
 
-🗂 Database Schema
+~ CASE WHEN
+
+~ Window Functions (RANK, PARTITION BY)
+
+~ CTEs (WITH clause)
+
+
+
+🗂 Database Schema :
 
 The project uses a normalized schema with the following tables:
 
 1️⃣ customers
 
-customer_id (PK)
+> customer_id (PK)
 
-customer_name
+> customer_name
 
-gender
+> gender
 
-city
+> city
 
-state
+> state
 
-signup_date
+> signup_date
 
 2️⃣ products
 
-product_id (PK)
+> product_id (PK)
 
-product_name
+> product_name
 
-category
+> category
 
-price
+> price
 
 3️⃣ orders
 
-order_id (PK)
+> order_id (PK)
 
-customer_id (FK)
+> customer_id (FK)
 
-order_date
+> order_date
 
-payment_mode
+> payment_mode
 
 4️⃣ order_items (Fact Table)
 
-order_item_id (PK)
+> order_item_id (PK)
 
-order_id (FK)
+> order_id (FK)
 
-product_id (FK)
+> product_id (FK)
 
-quantity
+> quantity
 
-total_amount
+> total_amount
 
 5️⃣ returns
 
-return_id (PK)
+> return_id (PK)
 
-order_id (FK)
+> order_id (FK)
 
-return_reason
+> return_reason
 
-return_date
+> return_date
 
 📈 Dataset Size
 
@@ -110,32 +115,38 @@ Order Items: ~12,000
 
 Total Records: 10,000+
 
+
 Data is generated using PostgreSQL functions to simulate realistic business scenarios.
 
-🔍 Key Business Questions Answered
+
+🔍 Key Business Questions Answered :
+
 ✔ Total & Monthly Sales Trend
 
-Analyze overall revenue
+> Analyze overall revenue
 
-Track month-over-month sales growth
+> Track month-over-month sales growth
 
 ✔ Top Customers by Revenue
 
-Identify high-value customers contributing most to sales
+> Identify high-value customers contributing most to sales
 
 ✔ Category-wise Sales Analysis
 
-Understand which product categories drive revenue
+> Understand which product categories drive revenue
 
 ✔ Repeat Customer Analysis
 
-Detect customers with multiple purchases
+> Detect customers with multiple purchases
 
 ✔ Top Product per Category
 
-Rank products using Window Functions
+> Rank products using Window Functions
+
 
 🧠 Sample Advanced Query
+
+
 SELECT category, product_name, sales
 FROM (
     SELECT
@@ -149,17 +160,20 @@ FROM (
 ) t
 WHERE rnk = 1;
 
-📊 Key Insights
 
-A small percentage of customers generate a large share of total revenue
+📊 Key Insights :
 
-Electronics and Fashion categories dominate sales
+> A small percentage of customers generate a large share of total revenue
 
-Repeat customers play a critical role in revenue stability
+> Electronics and Fashion categories dominate sales
 
-Window functions simplify complex ranking problems
+> Repeat customers play a critical role in revenue stability
+
+> Window functions simplify complex ranking problems
+> 
 
 📁 Project Structure
+
 Retail-SQL-Analytics
 │
 ├── README.md
@@ -167,6 +181,7 @@ Retail-SQL-Analytics
 ├── data_generation.sql
 ├── analysis_queries.sql
 └── insights.md
+
 
 🚀 What This Project Demonstrates
 
@@ -176,18 +191,22 @@ Retail-SQL-Analytics
 ✔ Clean, readable, and optimized SQL queries
 ✔ Portfolio-ready project for Data Analyst roles
 
+
 🔮 Future Enhancements
 
-Create Power BI dashboard using this dataset
+> Create Power BI dashboard using this dataset
 
-Add query performance optimization & indexing
+> Add query performance optimization & indexing
 
-Extend analysis to returns & profitability
+> Extend analysis to returns & profitability
 
-Deploy database on cloud (AWS / Azure)
+> Deploy database on cloud (AWS / Azure)
+
 
 👤 Author
 
 Amardeep Gautam
+
 Aspiring Data Analyst
+
 Skills: Excel | SQL | Power BI | PostgreSQL | Data Analysis
